@@ -85,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPreExecute() {
+            super.onPreExecute();
             mProgressBar.setVisibility(View.VISIBLE);
         }
 
@@ -107,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
                 showJsonDataView();
                 mSearchResultsTextView.setText(githubSearchResults);
             } else
-                mErrorMessageTextView.setVisibility(View.VISIBLE);
+                showErrorMessage();
         }
     }
 
